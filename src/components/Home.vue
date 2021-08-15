@@ -9,12 +9,25 @@
       <p class="mb-5 font-bold text-accent">
             Stay tuned with the latest data about cryptocurrencies in our two formats: Table view or Panel view.
           </p> 
-      <router-link to="/table" class="btn btn-primary">TABLE VIEW</router-link>
+      <router-link to="/table" class="btn btn-primary" @click="test">TABLE VIEW</router-link>
       <router-link to="/panel" class="btn btn-primary">PANEL VIEW</router-link>   
     </div>
   </div>
 </div>
 </template>
+
+<script>
+export default {
+  props:['cryptos', 'filteredCryptos'],
+  methods: {
+    test() {
+      console.log(this.cryptos);
+      console.log(this.filteredCryptos);
+    }
+  }
+}
+</script>
+
 
 <style scoped>
 .btn {

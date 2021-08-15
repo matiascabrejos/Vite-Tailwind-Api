@@ -3,8 +3,9 @@
 <!--   <HelloWorld msg="Hello Vue 3 + Vite" /> -->
 <!--   <CryptoTable :cryptos="cryptos" />
   <CryptoPanel :cryptos="cryptos" /> -->
-  <input type="text" v-model="textSearch" @keyup="cryptoFilter()">
-  <router-view :cryptos="cryptos" v-slot="slotProps">
+  <!-- <input type="text" v-model="textSearch" @keyup="cryptoFilter()"> -->
+  <TheNavbar></TheNavbar>
+  <router-view :cryptos="cryptos" :filteredCryptos="filteredCryptos" v-slot="slotProps">
     <transition name="route" mode="out-in">
       <component :is="slotProps.Component"></component>
     </transition>
@@ -19,6 +20,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import CryptoTable from './components/CryptoTable.vue'
 import CryptoPanel from './components/CryptoPanel.vue'
+import TheNavbar from './components/TheNavbar.vue'
 
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
@@ -31,6 +33,7 @@ import axios from 'axios'
     data() {
         return {
             cryptos: [],
+            filteredCryptos: [],
             textSearch: ''
         }
     },
@@ -51,13 +54,13 @@ import axios from 'axios'
             percent24hs: crypto.price_change_percentage_24h.toFixed(2),
           }
         })
-        console.log(myCryptoAssets)
+        this.filteredCryptos = this.cryptos;
       })
       .catch((err) => console.log(err))
   },
   methods: {
     cryptoFilter() {
-      this.cryptos = this.cryptos.filter((crypto) =>
+      this.filteredCryptos = this.cryptos.filter((crypto) =>
         crypto.name.toLowerCase().includes(this.textSearch.toLowerCase()) ||
         crypto.symbol.toLowerCase().includes(this.textSearch.toLowerCase())      
       )
