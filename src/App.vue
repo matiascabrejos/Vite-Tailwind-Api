@@ -3,6 +3,7 @@
 <!--   <HelloWorld msg="Hello Vue 3 + Vite" /> -->
 <!--   <CryptoTable :cryptos="cryptos" />
   <CryptoPanel :cryptos="cryptos" /> -->
+  <input type="text" v-model="textSearch" @keyup="cryptoFilter()">
   <router-view :cryptos="cryptos" v-slot="slotProps">
     <transition name="route" mode="out-in">
       <component :is="slotProps.Component"></component>
@@ -29,7 +30,8 @@ import axios from 'axios'
   export default {
     data() {
         return {
-            cryptos: []
+            cryptos: [],
+            textSearch: ''
         }
     },
     mounted() {
@@ -52,6 +54,14 @@ import axios from 'axios'
         console.log(myCryptoAssets)
       })
       .catch((err) => console.log(err))
+  },
+  methods: {
+    cryptoFilter() {
+      this.cryptos = this.cryptos.filter((crypto) =>
+        crypto.name.toLowerCase().includes(this.textSearch.toLowerCase()) ||
+        crypto.symbol.toLowerCase().includes(this.textSearch.toLowerCase())      
+      )
+    }
   }
   }
 </script>
