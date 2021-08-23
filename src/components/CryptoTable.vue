@@ -21,7 +21,7 @@
         <th><img class="w-10 rounded-full" v-bind:src="crypto.image" /></th> 
         <td>{{ crypto.name }}</td> 
         <td>{{ crypto.symbol }}</td> 
-        <td>{{ crypto.price }} US$</td>
+        <td v-bind:style="{color: crypto.price > 100 ? 'green' : 'red'}">{{ crypto.price }} US$</td>
         <td>1</td>
       </tr>
     </tbody>

@@ -14,7 +14,7 @@
             <span class="text-xs text-gray-400 leading-none">{{ crypto.symbol }}</span>
           </div>
           <div class="flex items-center">
-            <div class="text-lg text-white font-light">
+            <div class="text-lg text-white font-light" v-bind:style="{color: crypto.price > 100 ? 'green' : 'red'}">
               {{ crypto.price }} US$	
             </div>
             <img class="rounded-full focus:outline-none w-10 h-10 flex ml-auto transition duration-300 stroke-current" v-bind:src="crypto.image" />
