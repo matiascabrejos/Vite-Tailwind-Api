@@ -14,6 +14,7 @@
         <th>SYMBOL</th> 
         <th>PRICE</th>
         <th>CHANGE 24H</th>
+        <th>CHANGE 24H</th>
       </tr>
     </thead> 
     <tbody>
@@ -21,8 +22,9 @@
         <th><img class="w-10 rounded-full" v-bind:src="crypto.image" /></th> 
         <td>{{ crypto.name }}</td> 
         <td>{{ crypto.symbol }}</td> 
-        <td v-bind:style="{color: crypto.price > 100 ? 'green' : 'red'}">{{ crypto.price }} US$</td>
-        <td>1</td>
+        <td>{{ crypto.price }} US$</td>
+        <td v-bind:style="{color: crypto.priceChange24hs  > 0 ? 'green' : 'red'}">{{ crypto.priceChange24hs }}</td>
+        <td v-bind:style="{color: crypto.percent24hs  > 0 ? 'green' : 'red'}">{{ crypto.percent24hs }}</td>
       </tr>
     </tbody>
   </table>
