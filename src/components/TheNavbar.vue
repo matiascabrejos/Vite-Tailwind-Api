@@ -55,4 +55,11 @@
 #menu-toggle:checked+#menu {
   display: block;
 }
+
+a:hover,
+a.active {
+  color: red;
+  border-color: black;
+  background-color: white;
+}
 </style>

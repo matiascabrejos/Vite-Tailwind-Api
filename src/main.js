@@ -14,7 +14,8 @@ const router = createRouter({
         { path:'/home', component:Home, props: true },
         { path:'/table', component: CryptoTable, props: true},
         { path: '/panel', component:CryptoPanel, props: true }
-    ],    
+    ],
+    linkActiveClass: 'active'    
 });
 
 
