@@ -6,7 +6,7 @@
   </label> 
   <input type="text" placeholder="Name/Symbol" class="input input-primary input-bordered" v-model="textSearch" @keyup="cryptoFilter()">
 </div> 
-  <table class="table w-full table-fixed table-zebra">
+  <table class="table w-full table-fixed table-zebra mb-6">
     <thead>
       <tr>
         <th>#</th> 
