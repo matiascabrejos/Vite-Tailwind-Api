@@ -10,13 +10,13 @@
 
   <div class="hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto" id="menu">
     <div class="text-sm lg:flex-grow">
-      <router-link to="/home" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <router-link to="/home" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-accent mr-4">
         Home
       </router-link>
-      <router-link to="/table" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <router-link to="/table" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-accent mr-4">
         Table View
       </router-link>
-      <router-link to="/panel" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+      <router-link to="/panel" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-accent">
         Panel View
       </router-link>
     </div>
@@ -29,12 +29,13 @@
   display: block;
 }
 
-a:hover,
+
+/* a:hover,
 a.active {
   color: red;
   border-color: black;
   background-color: white;
-}
+} */
 
 nav {
   background-color: #171717;

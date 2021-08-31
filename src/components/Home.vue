@@ -1,6 +1,6 @@
 <template>
 <div class="hero min-h-screen" style="background-image: url(&quot;https://copper2.wpengine.com/wp-content/uploads/2021/03/top-10-tokens-01.jpg&quot;);">
-  <div class="hero-overlay bg-opacity-60"></div> 
+  <div class="hero-overlay"></div> 
   <div class="text-center hero-content text-neutral-content">
     <div class="max-w-md">
       <h1 class="mb-5 text-5xl font-bold text-accent">

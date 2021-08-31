@@ -91,4 +91,8 @@ import axios from 'axios'
 .route-leave-from {
   opacity: 1;
 }
+
+body {
+  background-color: #444444;
+}
 </style>
