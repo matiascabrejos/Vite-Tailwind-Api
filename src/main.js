@@ -11,7 +11,8 @@ import axios from "axios";
 const router = createRouter({
     history: createWebHistory(),
     routes:[
-        { path:'/home', component:Home, props: true },
+        { path:'/', component:Home, props: true },
+        { path:'/home', component: Home, props: true},
         { path:'/table', component: CryptoTable, props: true},
         { path: '/panel', component:CryptoPanel, props: true }
     ],
