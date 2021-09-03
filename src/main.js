@@ -5,6 +5,8 @@ import App from './App.vue'
 import CryptoTable from './components/CryptoTable.vue'
 import CryptoPanel from './components/CryptoPanel.vue'
 import Home from './components/Home.vue'
+import NotFound from './components/NotFound.vue'
+
 import './tailwind.css'
 import axios from "axios";
 
@@ -14,7 +16,8 @@ const router = createRouter({
         { path:'/', component:Home, props: true },
         { path:'/home', component: Home, props: true},
         { path:'/table', component: CryptoTable, props: true},
-        { path: '/panel', component:CryptoPanel, props: true }
+        { path: '/panel', component:CryptoPanel, props: true },
+        { path:'/:notFound(.*)', component: NotFound },   
     ],
     linkActiveClass: 'active'    
 });

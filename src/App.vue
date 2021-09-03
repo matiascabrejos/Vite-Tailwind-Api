@@ -10,6 +10,7 @@
       <component :is="slotProps.Component"></component>
     </transition>
   </router-view>
+<!--   <TheFooter></TheFooter> -->
   <!-- <div v-for="crypto in cryptos" :key="crypto.symbol">
     <h1>{{ crypto.name }}</h1>
   </div> -->
@@ -21,6 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import CryptoTable from './components/CryptoTable.vue'
 import CryptoPanel from './components/CryptoPanel.vue'
 import TheNavbar from './components/TheNavbar.vue'
+import TheFooter from './components/TheFooter.vue'
 
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
