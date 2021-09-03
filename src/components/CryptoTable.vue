@@ -13,8 +13,7 @@
         <th>NAME</th> 
         <th>SYMBOL</th> 
         <th>PRICE</th>
-        <th>CHANGE 24H</th>
-        <th>CHANGE 24H</th>
+        <th>CHANGE 24H</th> 
       </tr>
     </thead> 
     <tbody>
@@ -23,7 +22,6 @@
         <td>{{ crypto.name }}</td> 
         <td>{{ crypto.symbol }}</td> 
         <td>{{ crypto.price }} US$</td>
-        <td v-bind:style="{color: crypto.priceChange24hs  > 0 ? 'green' : 'red'}">{{ crypto.priceChange24hs }}</td>
         <td v-bind:style="{color: crypto.percent24hs  > 0 ? 'green' : 'red'}">{{ crypto.percent24hs }}</td>
       </tr>
     </tbody>
