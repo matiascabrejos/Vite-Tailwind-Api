@@ -5,7 +5,7 @@
     </div>
     <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2" v-for="crypto in filteredCryptos" :key="crypto.sym">
       <div class="rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
-        <div class="rounded-lg p-4 bg-purple-700 flex flex-col">
+        <div class="rounded-lg p-4 bg-indigo-500 flex flex-col">
           <div>
             <h5 class="text-right" v-bind:style="{color: crypto.percent24hs  > 0 ? 'green' : 'red'}">{{ crypto.percent24hs }}%</h5>
             <h5 class="text-white text-2xl font-bold leading-none">

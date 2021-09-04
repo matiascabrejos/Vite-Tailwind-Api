@@ -2,9 +2,9 @@
 <div class="overflow-x-auto container mx-auto px-4">
   <div class="form-control pb-6">
   <label class="label">
-    <span class="label-text">Name/Symbol Filter</span>
+    <span class="label-text pt-2 m-auto">Name/Symbol Filter</span>
   </label> 
-  <input type="text" placeholder="Name/Symbol" class="input input-accent input-bordered" v-model="textSearch" @keyup="cryptoFilter()">
+  <input type="text" placeholder="Name/Symbol" class="input input-accent input-bordered text-center" v-model="textSearch" @keyup="cryptoFilter()">
 </div> 
   <table class="table w-full table-fixed table-zebra mb-6">
     <thead>
@@ -13,7 +13,7 @@
         <th>NAME</th> 
         <th>SYMBOL</th> 
         <th>PRICE</th>
-        <th>CHANGE 24H</th> 
+        <th>CHANGE 24H</th>
       </tr>
     </thead> 
     <tbody>
@@ -49,3 +49,5 @@ export default {
   }
 }
 </script>
+
+
