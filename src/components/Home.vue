@@ -8,7 +8,8 @@
           </h1> 
       <p class="mb-5 font-bold text-accent">
             Stay tuned with the latest data about cryptocurrencies in our two formats: Table view or Panel view.
-          </p> 
+          </p>
+          <the-button></the-button>
       <router-link to="/table" class="btn btn-accent" @click="test">TABLE VIEW</router-link>
       <router-link to="/panel" class="btn btn-accent">PANEL VIEW</router-link>   
     </div>
@@ -17,7 +18,11 @@
 </template>
 
 <script>
+import TheButton from './TheButton.vue'
 export default {
+  components: {
+    TheButton
+  },
   props:['cryptos', 'filteredCryptos'],
   methods: {
     test() {
