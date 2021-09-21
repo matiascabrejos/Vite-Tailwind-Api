@@ -1,9 +1,4 @@
 <template>
-  <!--   <img alt="Vue logo" src="./assets/logo.png" class="mx-auto"/> -->
-  <!--   <HelloWorld msg="Hello Vue 3 + Vite" /> -->
-  <!--   <CryptoTable :cryptos="cryptos" />
-  <CryptoPanel :cryptos="cryptos" /> -->
-  <!-- <input type="text" v-model="textSearch" @keyup="cryptoFilter()"> -->
   <TheNavbar></TheNavbar>
   <router-view
     :cryptos="cryptos"
@@ -14,14 +9,9 @@
       <component :is="slotProps.Component"></component>
     </transition>
   </router-view>
-<!--   <TheFooter></TheFooter> -->
-  <!-- <div v-for="crypto in cryptos" :key="crypto.symbol">
-    <h1>{{ crypto.name }}</h1>
-  </div> -->
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import CryptoTable from './components/CryptoTable.vue'
 import CryptoPanel from './components/CryptoPanel.vue'
 import TheNavbar from './components/TheNavbar.vue'
@@ -42,7 +32,6 @@ export default {
     }
   },
   mounted() {
-    console.log('HELLO!')
     axios(
       'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1&sparkline=false#'
     )

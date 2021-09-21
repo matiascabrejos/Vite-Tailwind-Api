@@ -1,5 +1,5 @@
 <template>
-  <div class="px-8 py-32">
+  <div class="px-2 py-2">
     <div class="grid gap-8 items-start justify-center">
       <div class="relative group">
         <div
@@ -39,7 +39,7 @@
               transition
               duration-200
             "
-            >See what's new</span
+            ><slot></slot></span
           >
         </button>
       </div>
